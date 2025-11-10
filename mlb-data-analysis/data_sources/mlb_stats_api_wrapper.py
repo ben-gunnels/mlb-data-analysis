@@ -44,6 +44,7 @@ class MLBStatsAPI:
         
         if "sports" in response_object:
             return pd.DataFrame(response_object["sports"])
+        
         return pd.DataFrame({})
 
 
@@ -59,7 +60,6 @@ class MLBStatsAPI:
         sport_id: int = 1
     ) -> pd.DataFrame:
         response_object = self.statsapi.latest_season(sportId=sport_id)
-
         return pd.DataFrame([response_object])
 
 
@@ -92,6 +92,7 @@ class MLBStatsAPI:
 
         # Cast the statistical category of interest to numeric
         df["val"] = pd.to_numeric(df["val"])
+
         return df
 
 
@@ -114,6 +115,7 @@ class MLBStatsAPI:
         
         if len(response_object):
             return self._compile_player_lookup_to_dataframe(response_object)
+        
         return pd.DataFrame([])
     
 
@@ -158,6 +160,7 @@ class MLBStatsAPI:
             sportId=sport_id,
             season=season
         )
+
         return self._compile_player_stats_to_dataframe(response_object)
 
 
@@ -184,6 +187,7 @@ class MLBStatsAPI:
             season=season,
             include_series_status=include_series_status
         )
+
         return pd.DataFrame(response_object)
 
 
@@ -208,6 +212,7 @@ class MLBStatsAPI:
                 f"Invalid league_id/division pair: ({league_id}, {division}). "
                 "Valid pairs: (103, al*), (104, nl*)."
             )
+        
         return self.statsapi.standings_data(
             leagueId=league_id,
             division=division,

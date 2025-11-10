@@ -1,6 +1,6 @@
 import pybaseball
 import pandas as pd
-from typing import Literal
+from typing import Literal, List
 from lib.types import Date
 from .lahman import LahmanAPI
 
@@ -49,6 +49,15 @@ class PlayerSearch:
             player_ids,
             key_type=key_type
         ))
+    
+
+    def search_player_list(
+        self,
+        player_list: List
+    ) -> pd.DataFrame:
+        return pd.DataFrame(
+            pybaseball.player_search_list(player_list)
+        )
     
 
     def chadwick(
