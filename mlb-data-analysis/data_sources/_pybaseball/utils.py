@@ -1,0 +1,52 @@
+TEAM_CODES = {
+    "Angels": "ANA",
+    "Astros": "HOU",
+    "Athletics": "OAK",
+    "Blue Jays": "TOR",
+    "Braves": "ATL",
+    "Brewers": "MIL",
+    "Cardinals": "STL",
+    "Cubs": "CHC",
+    "Rays": "TBD",
+    "Diamondbacks": "ARI",
+    "Dodgers": "LAD",
+    "Giants": "SFG",
+    "Guardians": "CLE",
+    "Mariners": "SEA",
+    "Marlins": "FLA",
+    "Mets": "NYM",
+    "Nationals": "WSN",
+    "Orioles": "BAL",
+    "Padres": "SDP",
+    "Phillies": "PHI",
+    "Pirates": "PIT",
+    "Rangers": "TEX",
+    "Red Sox": "BOS",
+    "Reds": "CIN",
+    "Rockies": "COL",
+    "Royals": "KCR",
+    "Tigers": "DET",
+    "Twins": "MIN",
+    "White Sox": "CHW",
+    "Yankees": "NYY"
+}
+
+PITCH_CODES = set(
+    [
+        "4-Seamer", 
+        "Sinker", 
+        "Changeup", 
+        "Curveball", 
+        "Cutter", 
+        "Slider", 
+        "Sinker",
+        "FF", 
+        "SIFT", 
+        "CH", 
+        "CUKC", 
+        "FC", 
+        "SL", 
+        "FS", 
+        "ALL"
+    ]
+)

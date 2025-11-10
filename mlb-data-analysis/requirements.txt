@@ -1,2 +1,3 @@
 MLB-StatsAPI
+pybaseball
 pytest >= 8
