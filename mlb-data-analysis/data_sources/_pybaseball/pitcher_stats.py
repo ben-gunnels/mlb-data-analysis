@@ -48,6 +48,13 @@ class Pitcher:
         )
     
 
+    def bref_war(
+        self,
+        return_all: bool = False
+    ) -> pd.DataFrame:
+        return pd.DataFrame(pybaseball.bwar_bat(return_all))
+    
+
     def splits(
         player_id: int,
         season: int = None,

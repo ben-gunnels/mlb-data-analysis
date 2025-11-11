@@ -1,0 +1,331 @@
+Endpoint: batters_stats
+--------------------------------------------------
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 673 entries, 2 to 456
+Data columns (total 320 columns):
+ #    Column           Dtype  
+---   ------           -----  
+ 0    IDfg             int64  
+ 1    Season           int64  
+ 2    Name             object 
+ 3    Team             object 
+ 4    Age              int64  
+ 5    G                int64  
+ 6    AB               int64  
+ 7    PA               int64  
+ 8    H                int64  
+ 9    1B               int64  
+ 10   2B               int64  
+ 11   3B               int64  
+ 12   HR               int64  
+ 13   R                int64  
+ 14   RBI              int64  
+ 15   BB               int64  
+ 16   IBB              int64  
+ 17   SO               int64  
+ 18   HBP              int64  
+ 19   SF               int64  
+ 20   SH               int64  
+ 21   GDP              int64  
+ 22   SB               int64  
+ 23   CS               int64  
+ 24   AVG              float64
+ 25   GB               int64  
+ 26   FB               int64  
+ 27   LD               int64  
+ 28   IFFB             int64  
+ 29   Pitches          int64  
+ 30   Balls            int64  
+ 31   Strikes          int64  
+ 32   IFH              int64  
+ 33   BU               int64  
+ 34   BUH              int64  
+ 35   BB%              float64
+ 36   K%               float64
+ 37   BB/K             float64
+ 38   OBP              float64
+ 39   SLG              float64
+ 40   OPS              float64
+ 41   ISO              float64
+ 42   BABIP            float64
+ 43   GB/FB            float64
+ 44   LD%              float64
+ 45   GB%              float64
+ 46   FB%              float64
+ 47   IFFB%            float64
+ 48   HR/FB            float64
+ 49   IFH%             float64
+ 50   BUH%             float64
+ 51   wOBA             float64
+ 52   wRAA             float64
+ 53   wRC              int64  
+ 54   Bat              float64
+ 55   Fld              float64
+ 56   Rep              float64
+ 57   Pos              float64
+ 58   RAR              float64
+ 59   WAR              float64
+ 60   Dol              object 
+ 61   Spd              float64
+ 62   wRC+             int64  
+ 63   WPA              float64
+ 64   -WPA             float64
+ 65   +WPA             float64
+ 66   RE24             float64
+ 67   REW              float64
+ 68   pLI              float64
+ 69   phLI             float64
+ 70   PH               int64  
+ 71   WPA/LI           float64
+ 72   Clutch           float64
+ 73   FB% (Pitch)      float64
+ 74   FBv              float64
+ 75   SL%              float64
+ 76   SLv              float64
+ 77   CT%              float64
+ 78   CTv              float64
+ 79   CB%              float64
+ 80   CBv              float64
+ 81   CH%              float64
+ 82   CHv              float64
+ 83   SF%              float64
+ 84   SFv              float64
+ 85   KN%              float64
+ 86   KNv              float64
+ 87   XX%              float64
+ 88   PO%              float64
+ 89   wFB              float64
+ 90   wSL              float64
+ 91   wCT              float64
+ 92   wCB              float64
+ 93   wCH              float64
+ 94   wSF              float64
+ 95   wKN              float64
+ 96   wFB/C            float64
+ 97   wSL/C            float64
+ 98   wCT/C            float64
+ 99   wCB/C            float64
+ 100  wCH/C            float64
+ 101  wSF/C            float64
+ 102  wKN/C            float64
+ 103  O-Swing%         float64
+ 104  Z-Swing%         float64
+ 105  Swing%           float64
+ 106  O-Contact%       float64
+ 107  Z-Contact%       float64
+ 108  Contact%         float64
+ 109  Zone%            float64
+ 110  F-Strike%        float64
+ 111  SwStr%           float64
+ 112  BsR              float64
+ 113  FA% (sc)         float64
+ 114  FT% (sc)         float64
+ 115  FC% (sc)         float64
+ 116  FS% (sc)         float64
+ 117  FO% (sc)         float64
+ 118  SI% (sc)         float64
+ 119  SL% (sc)         float64
+ 120  CU% (sc)         float64
+ 121  KC% (sc)         float64
+ 122  EP% (sc)         float64
+ 123  CH% (sc)         float64
+ 124  SC% (sc)         float64
+ 125  KN% (sc)         float64
+ 126  UN% (sc)         float64
+ 127  vFA (sc)         float64
+ 128  vFT (sc)         float64
+ 129  vFC (sc)         float64
+ 130  vFS (sc)         float64
+ 131  vFO (sc)         float64
+ 132  vSI (sc)         float64
+ 133  vSL (sc)         float64
+ 134  vCU (sc)         float64
+ 135  vKC (sc)         float64
+ 136  vEP (sc)         float64
+ 137  vCH (sc)         float64
+ 138  vSC (sc)         float64
+ 139  vKN (sc)         float64
+ 140  FA-X (sc)        float64
+ 141  FT-X (sc)        float64
+ 142  FC-X (sc)        float64
+ 143  FS-X (sc)        float64
+ 144  FO-X (sc)        float64
+ 145  SI-X (sc)        float64
+ 146  SL-X (sc)        float64
+ 147  CU-X (sc)        float64
+ 148  KC-X (sc)        float64
+ 149  EP-X (sc)        float64
+ 150  CH-X (sc)        float64
+ 151  SC-X (sc)        float64
+ 152  KN-X (sc)        float64
+ 153  FA-Z (sc)        float64
+ 154  FT-Z (sc)        float64
+ 155  FC-Z (sc)        float64
+ 156  FS-Z (sc)        float64
+ 157  FO-Z (sc)        float64
+ 158  SI-Z (sc)        float64
+ 159  SL-Z (sc)        float64
+ 160  CU-Z (sc)        float64
+ 161  KC-Z (sc)        float64
+ 162  EP-Z (sc)        float64
+ 163  CH-Z (sc)        float64
+ 164  SC-Z (sc)        float64
+ 165  KN-Z (sc)        float64
+ 166  wFA (sc)         float64
+ 167  wFT (sc)         float64
+ 168  wFC (sc)         float64
+ 169  wFS (sc)         float64
+ 170  wFO (sc)         float64
+ 171  wSI (sc)         float64
+ 172  wSL (sc)         float64
+ 173  wCU (sc)         float64
+ 174  wKC (sc)         float64
+ 175  wEP (sc)         float64
+ 176  wCH (sc)         float64
+ 177  wSC (sc)         float64
+ 178  wKN (sc)         float64
+ 179  wFA/C (sc)       float64
+ 180  wFT/C (sc)       float64
+ 181  wFC/C (sc)       float64
+ 182  wFS/C (sc)       float64
+ 183  wFO/C (sc)       float64
+ 184  wSI/C (sc)       float64
+ 185  wSL/C (sc)       float64
+ 186  wCU/C (sc)       float64
+ 187  wKC/C (sc)       float64
+ 188  wEP/C (sc)       float64
+ 189  wCH/C (sc)       float64
+ 190  wSC/C (sc)       float64
+ 191  wKN/C (sc)       float64
+ 192  O-Swing% (sc)    float64
+ 193  Z-Swing% (sc)    float64
+ 194  Swing% (sc)      float64
+ 195  O-Contact% (sc)  float64
+ 196  Z-Contact% (sc)  float64
+ 197  Contact% (sc)    float64
+ 198  Zone% (sc)       float64
+ 199  Pace             float64
+ 200  Def              float64
+ 201  wSB              float64
+ 202  UBR              float64
+ 203  Age Rng          object 
+ 204  Off              float64
+ 205  Lg               float64
+ 206  wGDP             float64
+ 207  Pull%            float64
+ 208  Cent%            float64
+ 209  Oppo%            float64
+ 210  Soft%            float64
+ 211  Med%             float64
+ 212  Hard%            float64
+ 213  TTO%             float64
+ 214  CH% (pi)         float64
+ 215  CS% (pi)         float64
+ 216  CU% (pi)         float64
+ 217  FA% (pi)         float64
+ 218  FC% (pi)         float64
+ 219  FS% (pi)         float64
+ 220  KN% (pi)         float64
+ 221  SB% (pi)         float64
+ 222  SI% (pi)         float64
+ 223  SL% (pi)         float64
+ 224  XX% (pi)         float64
+ 225  vCH (pi)         float64
+ 226  vCS (pi)         float64
+ 227  vCU (pi)         float64
+ 228  vFA (pi)         float64
+ 229  vFC (pi)         float64
+ 230  vFS (pi)         float64
+ 231  vKN (pi)         float64
+ 232  vSB (pi)         float64
+ 233  vSI (pi)         float64
+ 234  vSL (pi)         float64
+ 235  vXX (pi)         float64
+ 236  CH-X (pi)        float64
+ 237  CS-X (pi)        float64
+ 238  CU-X (pi)        float64
+ 239  FA-X (pi)        float64
+ 240  FC-X (pi)        float64
+ 241  FS-X (pi)        float64
+ 242  KN-X (pi)        float64
+ 243  SB-X (pi)        float64
+ 244  SI-X (pi)        float64
+ 245  SL-X (pi)        float64
+ 246  XX-X (pi)        float64
+ 247  CH-Z (pi)        float64
+ 248  CS-Z (pi)        float64
+ 249  CU-Z (pi)        float64
+ 250  FA-Z (pi)        float64
+ 251  FC-Z (pi)        float64
+ 252  FS-Z (pi)        float64
+ 253  KN-Z (pi)        float64
+ 254  SB-Z (pi)        float64
+ 255  SI-Z (pi)        float64
+ 256  SL-Z (pi)        float64
+ 257  XX-Z (pi)        float64
+ 258  wCH (pi)         float64
+ 259  wCS (pi)         float64
+ 260  wCU (pi)         float64
+ 261  wFA (pi)         float64
+ 262  wFC (pi)         float64
+ 263  wFS (pi)         float64
+ 264  wKN (pi)         float64
+ 265  wSB (pi)         float64
+ 266  wSI (pi)         float64
+ 267  wSL (pi)         float64
+ 268  wXX (pi)         float64
+ 269  wCH/C (pi)       float64
+ 270  wCS/C (pi)       float64
+ 271  wCU/C (pi)       float64
+ 272  wFA/C (pi)       float64
+ 273  wFC/C (pi)       float64
+ 274  wFS/C (pi)       float64
+ 275  wKN/C (pi)       float64
+ 276  wSB/C (pi)       float64
+ 277  wSI/C (pi)       float64
+ 278  wSL/C (pi)       float64
+ 279  wXX/C (pi)       float64
+ 280  O-Swing% (pi)    float64
+ 281  Z-Swing% (pi)    float64
+ 282  Swing% (pi)      float64
+ 283  O-Contact% (pi)  float64
+ 284  Z-Contact% (pi)  float64
+ 285  Contact% (pi)    float64
+ 286  Zone% (pi)       float64
+ 287  Pace (pi)        float64
+ 288  FRM              float64
+ 289  AVG+             int64  
+ 290  BB%+             int64  
+ 291  K%+              int64  
+ 292  OBP+             int64  
+ 293  SLG+             int64  
+ 294  ISO+             int64  
+ 295  BABIP+           float64
+ 296  LD+%             float64
+ 297  GB%+             float64
+ 298  FB%+             float64
+ 299  HR/FB%+          float64
+ 300  Pull%+           float64
+ 301  Cent%+           float64
+ 302  Oppo%+           float64
+ 303  Soft%+           float64
+ 304  Med%+            float64
+ 305  Hard%+           float64
+ 306  EV               float64
+ 307  LA               float64
+ 308  Barrels          int64  
+ 309  Barrel%          float64
+ 310  maxEV            float64
+ 311  HardHit          int64  
+ 312  HardHit%         float64
+ 313  Events           int64  
+ 314  CStr%            float64
+ 315  CSW%             float64
+ 316  xBA              float64
+ 317  xSLG             float64
+ 318  xwOBA            float64
+ 319  L-WAR            float64
+dtypes: float64(272), int64(44), object(4)
+memory usage: 1.6+ MB
+--------------------------------------------------
+

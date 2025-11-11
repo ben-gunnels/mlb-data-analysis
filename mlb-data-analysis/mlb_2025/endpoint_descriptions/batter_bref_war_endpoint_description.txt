@@ -1,0 +1,28 @@
+Endpoint: bref_war
+--------------------------------------------------
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 124865 entries, 0 to 124864
+Data columns (total 17 columns):
+ #   Column              Non-Null Count   Dtype  
+---  ------              --------------   -----  
+ 0   name_common         124865 non-null  object 
+ 1   mlb_ID              124650 non-null  float64
+ 2   player_ID           124865 non-null  object 
+ 3   year_ID             124865 non-null  int64  
+ 4   team_ID             124865 non-null  object 
+ 5   stint_ID            124865 non-null  int64  
+ 6   lg_ID               124131 non-null  object 
+ 7   pitcher             124863 non-null  object 
+ 8   G                   124865 non-null  int64  
+ 9   PA                  124029 non-null  float64
+ 10  salary              49801 non-null   float64
+ 11  runs_above_avg      124029 non-null  float64
+ 12  runs_above_avg_off  124029 non-null  float64
+ 13  runs_above_avg_def  124029 non-null  float64
+ 14  WAR_rep             113757 non-null  float64
+ 15  WAA                 113759 non-null  float64
+ 16  WAR                 113757 non-null  float64
+dtypes: float64(9), int64(3), object(5)
+memory usage: 16.2+ MB
+--------------------------------------------------
+
