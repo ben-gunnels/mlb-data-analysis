@@ -1,7 +1,8 @@
 import pandas as pd
+import numbers
+import numpy as np
 
-
-__all__ = ["describe_endpoint"]
+__all__ = ["describe_endpoint", "compile_average_player_values", "monetary_string_to_numeric"]
 
 def describe_endpoint(name, df):
     """Formats the DataFrame info string for writing."""
@@ -44,3 +45,23 @@ def compile_average_player_values(player_value_stats: list[str], stats_df: pd.Da
         average_player_values[f"dollar_per_{stat}"] = dollar_per_stat
 
     return  average_player_values
+
+
+def monetary_string_to_numeric(
+    monetary_val: str | numbers.Number, 
+):
+    if isinstance(monetary_val, numbers.Number):
+        return np.float64(monetary_val)
+    
+    # strip dollar char and commas
+    monetary_val = (
+        monetary_val
+        .replace("$", "")
+        .replace(",", "")
+    ) 
+
+    return np.float64(monetary_val)
+
+
+
+    

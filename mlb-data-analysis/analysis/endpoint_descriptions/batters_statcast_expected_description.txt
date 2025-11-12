@@ -1,0 +1,25 @@
+Endpoint: batters_statcast_expected_stats
+--------------------------------------------------
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 673 entries, 0 to 672
+Data columns (total 14 columns):
+ #   Column                    Non-Null Count  Dtype  
+---  ------                    --------------  -----  
+ 0   last_name, first_name     673 non-null    object 
+ 1   player_id                 673 non-null    int64  
+ 2   year                      673 non-null    int64  
+ 3   pa                        673 non-null    int64  
+ 4   bip                       673 non-null    int64  
+ 5   ba                        673 non-null    float64
+ 6   est_ba                    665 non-null    float64
+ 7   est_ba_minus_ba_diff      665 non-null    float64
+ 8   slg                       673 non-null    float64
+ 9   est_slg                   665 non-null    float64
+ 10  est_slg_minus_slg_diff    665 non-null    float64
+ 11  woba                      673 non-null    float64
+ 12  est_woba                  673 non-null    float64
+ 13  est_woba_minus_woba_diff  673 non-null    float64
+dtypes: float64(9), int64(4), object(1)
+memory usage: 73.7+ KB
+--------------------------------------------------
+
