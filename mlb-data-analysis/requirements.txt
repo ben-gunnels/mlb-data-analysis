@@ -1,3 +1,6 @@
 MLB-StatsAPI
 pybaseball
 pytest >= 8
+pandas
+shiny
+jinja2
