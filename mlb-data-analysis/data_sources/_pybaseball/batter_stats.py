@@ -52,10 +52,15 @@ class Batter:
 
     def bref_war(
         self,
+        season: int | None = None,
         return_all: bool = False
     ) -> pd.DataFrame:
-        return pd.DataFrame(pybaseball.bwar_bat(return_all))
-    
+        response_object = pd.DataFrame(pybaseball.bwar_bat(return_all))
+
+        if season is not None:
+            return response_object[response_object["year_ID"] == season]
+
+        return response_object
 
     def splits(
         player_id: int,

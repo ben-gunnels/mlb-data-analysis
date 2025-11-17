@@ -1,8 +1,9 @@
 import pandas as pd
 import numbers
 import numpy as np
+import unicodedata
 
-__all__ = ["describe_endpoint", "compile_average_player_values", "monetary_string_to_numeric"]
+__all__ = ["describe_endpoint", "compile_average_player_values", "monetary_string_to_numeric", "clean_player_name"]
 
 def describe_endpoint(name, df):
     """Formats the DataFrame info string for writing."""
@@ -23,8 +24,10 @@ def describe_endpoint(name, df):
     buf.append("\n")  # blank line between endpoints
     return "\n".join(buf)
 
-
-def compile_average_player_values(player_value_stats: list[str], stats_df: pd.DataFrame) -> dict:
+def compile_average_player_values(
+        player_value_stats: list[str], 
+        stats_df: pd.DataFrame
+) -> dict:
     average_player_values = {}
 
     for stat in player_value_stats:
@@ -46,10 +49,11 @@ def compile_average_player_values(player_value_stats: list[str], stats_df: pd.Da
 
     return  average_player_values
 
-
 def monetary_string_to_numeric(
-    monetary_val: str | numbers.Number, 
-):
+    monetary_val: str | numbers.Number
+) -> np.float64:
+    """Returns an np.float64 cast number given a numeric string or numeric value.
+    """
     if isinstance(monetary_val, numbers.Number):
         return np.float64(monetary_val)
     
@@ -61,6 +65,14 @@ def monetary_string_to_numeric(
     ) 
 
     return np.float64(monetary_val)
+
+def clean_player_name(name: str) -> str:
+    """Removes special accented characters from a players name and returns the cleaned string.
+    """
+    return ''.join(
+        c for c in unicodedata.normalize('NFKD', name)
+        if not unicodedata.combining(c)
+    )
 
 
 
